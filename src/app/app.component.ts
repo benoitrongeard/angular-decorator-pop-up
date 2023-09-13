@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'test-decorator-pop-up';
+  title = 'angular-decorator-pop-up';
 }
