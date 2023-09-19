@@ -4,6 +4,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { confirmationPopUp } from './decorators/confirm-pop-up.decorator';
 
 export interface User {
   id: number,
@@ -32,6 +33,7 @@ export class AppComponent {
   displayedColumns: string[] = ['firstName', 'lastName', 'email', 'age', 'delete'];
   dataSource = USERS;
 
+  @confirmationPopUp({ title: 'Confirmation', message: 'Are you sure to delete this user ?' })
   deleteUser(element: User) {
     this.dataSource = this.dataSource.filter(user => user.id != element.id);
   }

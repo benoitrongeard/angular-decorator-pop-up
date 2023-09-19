@@ -1,4 +1,4 @@
-export interface ConfirmDialogData {
+export interface ConfirmPopUpData {
     title: string;
     message: string;
 }
